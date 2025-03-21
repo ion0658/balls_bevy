@@ -1,0 +1,28 @@
+[workspace]
+members = ["app", "crates/*"]
+resolver = "3"
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+authors = ["Ion OH"]
+
+[workspace.dependencies]
+anyhow = { version = "1" }
+bevy = { version = "*" }
+bevy_rapier2d = { version = "*" }
+properties = { path = "crates/properties" }
+rand = { version = "0" }
+tracing = { version = "0" }
+tracing-subscriber = { version = "0" }
+
+# Enable a small amount of optimization in the dev profile.
+[profile.dev]
+opt-level = 1
+split-debuginfo = "packed"
+
+[profile.release]
+opt-level = 3
+codegen-units = 1
+strip = true
+split-debuginfo = "packed"

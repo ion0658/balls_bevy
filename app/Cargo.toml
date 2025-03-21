@@ -1,0 +1,18 @@
+[package]
+name = "app"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+
+[dependencies]
+anyhow = { workspace = true, features = ["backtrace"] }
+bevy = { workspace = true }
+bevy_rapier2d = { workspace = true, features = [
+    "simd-stable",
+    "parallel",
+    "debug-render-2d",
+] }
+properties = { workspace = true }
+rand = { workspace = true }
+tracing = { workspace = true }
+tracing-subscriber = { workspace = true }

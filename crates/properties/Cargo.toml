@@ -1,0 +1,8 @@
+[package]
+name = "properties"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+
+[dependencies]
+bevy = { workspace = true }
